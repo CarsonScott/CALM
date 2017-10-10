@@ -1,4 +1,4 @@
-class Buffer:
+class BufferStore:
 
 	def __init__(self, size):
 		self.data = []
