@@ -1,7 +1,7 @@
 from math import sqrt
 from MarkovNetwork import *
 from BufferStore import *
-from Stats import gaussian, quadratic
+from Statistics import *
 
 class AdaptiveModel:
 
