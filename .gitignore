@@ -1,1 +1,4 @@
 test.py
+*.pyc
+src/log.txt
+src/test1.py
