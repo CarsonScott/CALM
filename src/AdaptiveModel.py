@@ -6,29 +6,28 @@ from Statistics import *
 class AdaptiveModel:
 
 	def __init__(self, mSize, bSize):
+		self.states = [0 for i in range(mSize)]
 		self.memory = MarkovNetwork(mSize)
 		self.buffer = BufferStore(bSize)
-		self.lrate = 0.001
-		self.drate = 0.0006
+		self.lrate = 0.004
+		self.drate = 0.001
 
 	def update(self, x):
-		self.buffer.add(x)
+		v = self.buffer.add(x)
+		if x != None: self.states[x] = 1
+		if v != None: self.states[v] = 0
+		
 		data = self.buffer.data
 		for i in range(len(data)):
-			for j in range(i, len(data)):
-				a = data[i]
-				b = data[j]
-				if a != b and None not in (a, b):
-					v = self.memory.get(a, b)
-					v += self.lrate * logistic(abs(v), 1, 0, -1) * sqrt(abs(a-b))
-					self.memory.set(a, b, v)
+			a = data[i]
+			for j in range(len(self.states)):
+				if j != a and None not in (a, j):
+					m = self.memory.get(a, j)
+					r = logistic(abs(m), 1, 0.5, -5)
 
-		data = self.memory.data
-		for i in range(len(data)):
-			for j in range(len(data)):
-				x = self.memory.get(i, j)
-				if x != None:
-					x -= self.drate * quadratic(x, 1, 0, .1)			
-					if abs(x) > 1:
-						x = x/abs(x)	
-					self.memory.set(i, j, x)
+					if self.states[j] == 1:
+						m += self.lrate*r
+					else:
+						m -= self.drate*r
+
+					self.memory.set(a, j, m)
