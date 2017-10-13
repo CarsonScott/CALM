@@ -19,4 +19,3 @@ The following example was produced by selecting an observation at random from a 
 
 Each pairing of x and y coordinates represent an association from an x element to a y element. The z axis contains the association values for each pairing. Each peak represents a statistically significant association between two obserbation
 
-The X and Y axes each represent the set of elements, and the Z axis represents the association values. Each peak represents a pair of elements in the pattern. The trough running diagonally through the center are the associations between elements and themselves, equaL to -1 by default. The rest of the graph in blue represent statistically insignificant or random pairings of elements. 
