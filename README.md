@@ -1,4 +1,4 @@
-# AutoMLN
+# CALM: Conditional-Associative Logic Memory
 
 ## Overview
 
