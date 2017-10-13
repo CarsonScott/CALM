@@ -2,7 +2,7 @@
 
 ## Overview
 
-The following is an outline for an unsupervised machine-learning algorithm that recognizes and predicts input patterns in real-time. The algorithm is essentially a system of information-processing inspired by the cognitive functions of the mind. The system has a collection of interacting memory systems akin to the spychological concepts of short-term and long-term memory, which allows it to learn by observation and adapt based on the frequency of patterns and their relationships through time. 
+The following is an unsupervised machine-learning algorithm that recognizes and predicts input patterns in real-time. The algorithm is essentially a system of information-processing inspired by the cognitive functions of the mind. The system has a collection of interacting memory systems akin to the spychological concepts of short-term and long-term memory, which allows it to learn by observation and adapt based on the frequency of patterns and their relationships through time. 
 
 An association value is a representation of conditional probability which is calculated between the current observation and the rest of the elements in the buffer, i.e. the previous N observations, then stored in the association matrix. Each  elements current place in the buffer determines the strength of the delta applied to its association value, so more recent observation are more strongly associated with the current observations than those further in the buffer. The association matrix enables the prediction of future observations based on current and previous observations. A significantly large association for the current observation to another signify that the other is likely to occur. The association value indicates the strength of the connection as well as the confidence interval related to the prediction. 
 
@@ -19,4 +19,3 @@ The following example was produced by selecting an observation at random from a 
 
 Each pairing of x and y coordinates represent an association from an x element to a y element. The z axis contains the association values for each pairing. Each peak represents a statistically significant association between two obserbation
 
-The X and Y axes each represent the set of elements, and the Z axis represents the association values. Each peak represents a pair of elements in the pattern. The trough running diagonally through the center are the associations between elements and themselves, equaL to -1 by default. The rest of the graph in blue represent statistically insignificant or random pairings of elements. 
