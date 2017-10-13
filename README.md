@@ -1,4 +1,4 @@
-# CALM: Conditional-Associative Logic Memory
+# CALM (Conditional-Associative Logic Memory)
 
 ## Overview
 
