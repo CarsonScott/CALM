@@ -32,7 +32,13 @@ class Network:
 					self.links[i][x] += self.lrate*d
 			else:
 				self.links[i][x] -= self.drate
-	
 		self.states[x] = 1
 		self.places[x] = 0
 
+	def extract(self, t):
+		y = []
+		for i in range(len(self.links)):
+			for j in range(len(self.links)):
+				if self.links[i][j] > t:
+					y.append((i, j))
+		return y
