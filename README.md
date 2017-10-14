@@ -7,11 +7,11 @@ An association value is a representation of conditional probability which is cal
 
 Therefore a system may be understood in terms of a Bayesian network, whose adaptations inherently create a foundation for inference, as well as provide a useful data structure, i.e. directed/labeled associations, which can be used to construct higher level objects like sequences (chains of associations) used to represent episodic memory, which in turn combine to form trees (hierarchies of sequences) used for high level reasoning like considering various alternatives in case a planned action fails, or for creating recursive models of observations that span multiple levels of complexity.
 
-## Prediction
+## Prediction 
 The system makes predictions based on the current and previous observations. It takes the rows of the association matrix that correspond the with elements currently stored in the buffer and calculates a probability distribution over the possible events that could occur at the next observation. Each probability depends on the current observation as well as the previous N observations, and therefore accomplishes a type of chaining that emphasizes the context of the observation to have an impact when inferring about the future.
 
-## Examples
-[To be updated] The following example was produced by selecting an observation at random from a set of 15 possible obervations. Each time a selection is ade, there is a small chance that the observation will not be random but instead will be from a "pattern", a pair of observations representing some event to be learned. The sampling process is repeated 1000 times and processed by the system to generate an association matrix.
+## Examples [To be updated]
+The following example was produced by selecting an observation at random from a set of 15 possible obervations. Each time a selection is ade, there is a small chance that the observation will not be random but instead will be from a "pattern", a pair of observations representing some event to be learned. The sampling process is repeated 1000 times and processed by the system to generate an association matrix.
 
     Pattern 1: {6, 13}
     Pattern 2: {9, 4)
