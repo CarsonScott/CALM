@@ -20,10 +20,10 @@
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
 
+e = 2.718281828459
 
 class Network:
-	
-	e = 2.718281828459
+
 	def compute(self, x):	
 		return 1/(1 + pow(e, (x - self.bsize)))
 
