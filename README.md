@@ -1,4 +1,4 @@
-# CALM (Conditional-Associative Logic Memory)
+# Conditional-Associative Logic Memory
 
 ## Learning
 The following is an unsupervised machine-learning algorithm that recognizes and predicts input patterns in real-time. The algorithm is essentially a system of information-processing inspired by the cognitive functions of the mind. The system has a collection of interacting memory systems akin to the spychological concepts of short-term and long-term memory, which allows it to learn by observation and adapt based on the frequency of patterns and their relationships through time. 
